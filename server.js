@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 
 //connect to mongoose database
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://sarahm16:1084829s@ds141320.mlab.com:41320/heroku_vpl36hst", { useNewUrlParser: true })
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
 
