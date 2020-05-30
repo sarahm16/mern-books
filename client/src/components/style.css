@@ -1,0 +1,11 @@
+.row {
+    padding: 10px;
+}
+
+.inline {
+    display: inline
+}
+
+button {
+    border-radius: 5px;
+}
