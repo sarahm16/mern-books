@@ -3,7 +3,7 @@ import API from '../utils/API';
 import './style.css'
 
 function Books(props) {
-    console.log('books props: ' + props.image)
+    //console.log('books props: ' + props.image)
     console.log(props.type)
     return(
         <div className='container border'>

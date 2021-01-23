@@ -23,18 +23,23 @@ class Results extends Component {
     }
 
     render() {
-        console.log()
+        // {this.state.books.length > 0 && console.log(this.state.books[0]);}
         return(
-            this.state.books.map(book => {
-                return(
-                    <Books title={book.volumeInfo.title}
-                    authors={book.volumeInfo.authors}
-                    image={book.volumeInfo.imageLinks.smallThumbnail}
-                    description={book.volumeInfo.description}
-                    infoLink={book.volumeInfo.infoLink} />
-                )
-            })
-            
+            <div>
+                {this.state.books.length == 0 && <div>LOADING</div>}
+                {this.state.books.length > 0 && 
+                this.state.books.map(book => {
+                    console.log(book.volumeInfo.imageLinks == undefined)
+                    return(
+                        <Books title={book.volumeInfo.title}
+                        authors={book.volumeInfo.authors}
+                        image={book.volumeInfo.imageLinks.smallThumbnail}
+                        description={book.volumeInfo.description}
+                        infoLink={book.volumeInfo.infoLink} />
+                        //<div></div>
+                    )
+                })}               
+            </div>
         )
     }
 }
