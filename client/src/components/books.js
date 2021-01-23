@@ -28,7 +28,7 @@ function Books(props) {
             <div className='row'>
 
                 <div className='col-lg-2'>
-                    <img src={props.image}></img>
+                    {props.image !==  undefined && <img src={props.image.smallThumbnail} />}
                 </div>
 
                 <div className='col-lg-10'>

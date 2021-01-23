@@ -33,7 +33,7 @@ class Results extends Component {
                     return(
                         <Books title={book.volumeInfo.title}
                         authors={book.volumeInfo.authors}
-                        image={book.volumeInfo.imageLinks.smallThumbnail}
+                        image={book.volumeInfo.imageLinks}
                         description={book.volumeInfo.description}
                         infoLink={book.volumeInfo.infoLink} />
                         //<div></div>
