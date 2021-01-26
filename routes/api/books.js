@@ -5,8 +5,9 @@ const Book = require('../../models/bookSchema');
 
 router.post('/save', function(req,res) {
     const book = req.body
-    console.log('book: ')
-    console.log(book)
+    // console.log('book: ')
+    // console.log(book)
+    //console.log(infoLink)
     Book.findOne({infoLink: book.infoLink})
         .then(res => {
             if(res == null) {
@@ -16,6 +17,15 @@ router.post('/save', function(req,res) {
                 })
             }
         })
+
+    // Book.create(book)
+    //     .then(bookdb => {
+    //         res.json('api book');
+    //         res.json(bookdb)
+    //     })
+    //     .catch(err => {
+    //         res.json(err)
+    //     })
 })
 
 router.get('/save', function(req,res) {

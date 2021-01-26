@@ -25,6 +25,7 @@ class Saved extends Component {
 
     render() {
         return this.state.saved.map(book => {
+            console.log(book)
             return <Books type='saved'
             id={book._id}
             title={book.title}
