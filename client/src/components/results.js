@@ -35,7 +35,7 @@ class Results extends Component {
                     console.log(book.volumeInfo.imageLinks == undefined)
                     book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.smallThumbnail;
                     return(
-                        <div className='col-lg-3 col-sm-1 col-md-6'>
+                        <div className='col-lg-3 col-sm-1 col-md-6 book-card'>
                             <Books title={book.volumeInfo.title}
                             authors={book.volumeInfo.authors}
                             image={image}

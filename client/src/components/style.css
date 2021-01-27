@@ -8,6 +8,11 @@
 
 .card {
     width: 200px;
+    height: 100%;
+}
+
+.book-card {
+    margin-bottom: 30px;
 }
 
 #image {
@@ -33,5 +38,4 @@ button {
 
 .buttons {
     padding: 3px;
-    width: 50%;
 }
