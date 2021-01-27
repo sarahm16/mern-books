@@ -10,8 +10,19 @@
     width: 200px;
 }
 
+#image {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+}
+
 button {
     border-radius: 5px;
+    border: 0px;
+}
+
+.button-row {
+    margin-top: 20px;
 }
 
 .delete-button,
@@ -21,5 +32,6 @@ button {
 }
 
 .buttons {
-    padding: 0px;
+    padding: 3px;
+    width: 50%;
 }

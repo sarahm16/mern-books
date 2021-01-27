@@ -25,23 +25,26 @@ class Results extends Component {
     render() {
         // {this.state.books.length > 0 && console.log(this.state.books[0]);}
         return(
-            <div>
+            <div className='container-fluid'>
+                <div className='row'>
                 {this.state.books.length == 0 && <div>LOADING</div>}
                 {this.state.books.length > 0 && 
                 this.state.books.map(book => {
                     console.log(book)
                     let image;
                     console.log(book.volumeInfo.imageLinks == undefined)
-                    book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.thumbnail;
+                    book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.smallThumbnail;
                     return(
-                        <Books title={book.volumeInfo.title}
-                        authors={book.volumeInfo.authors}
-                        image={image}
-                        description={book.volumeInfo.description}
-                        infoLink={book.volumeInfo.infoLink} />
-                        //<div></div>
+                        <div className='col-lg-3 col-sm-1 col-md-6'>
+                            <Books title={book.volumeInfo.title}
+                            authors={book.volumeInfo.authors}
+                            image={image}
+                            description={book.volumeInfo.description}
+                            infoLink={book.volumeInfo.infoLink} />
+                        </div>
                     )
-                })}               
+                })}
+                </div>               
             </div>
         )
     }
