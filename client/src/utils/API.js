@@ -6,7 +6,7 @@ export default {
         console.log(book)
         let saved = {
             authors: book.authors[0],
-            image: book.image.smallThumbnail,
+            image: book.image,
             title: book.title,
             description: book.description,
             infoLink: book.infoLink

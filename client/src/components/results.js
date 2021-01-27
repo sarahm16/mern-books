@@ -29,11 +29,13 @@ class Results extends Component {
                 {this.state.books.length == 0 && <div>LOADING</div>}
                 {this.state.books.length > 0 && 
                 this.state.books.map(book => {
+                    let image;
                     console.log(book.volumeInfo.imageLinks == undefined)
+                    book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.smallThumbnail;
                     return(
                         <Books title={book.volumeInfo.title}
                         authors={book.volumeInfo.authors}
-                        image={book.volumeInfo.imageLinks}
+                        image={image}
                         description={book.volumeInfo.description}
                         infoLink={book.volumeInfo.infoLink} />
                         //<div></div>
