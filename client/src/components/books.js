@@ -6,36 +6,57 @@ function Books(props) {
     //console.log('books props: ' + props.image)
     console.log(props.type)
     return(
-        <div className='container border'>
+        // <div className='container border'>
 
-            <div className='row'>
+        //     <div className='row'>
 
-                <div className='col-lg-10 text-left'>
-                    <h4><strong>{props.title}</strong></h4>
-                    <h6>Written by {props.authors}</h6>
-                </div>
+        //         <div className='col-lg-10 text-left'>
+        //             <h4><strong>{props.title}</strong></h4>
+        //             <h6>Written by {props.authors}</h6>
+        //         </div>
 
-                <div className='col-lg-2'>
-                    <div className='inline'>
-                        {props.type === 'saved' && <button onClick={() => API.delete(props.id)}>Delete</button>}
-                        {props.type !== 'saved' && <button onClick={() => API.save(props)}>Save</button>}
-                    </div>
-                    <div className='inline'><a href={props.infoLink}><button>View</button></a></div>
-                </div>
+        //         <div className='col-lg-2'>
+        //             <div className='inline'>
+        //                 {props.type === 'saved' && <button onClick={() => API.delete(props.id)}>Delete</button>}
+        //                 {props.type !== 'saved' && <button onClick={() => API.save(props)}>Save</button>}
+        //             </div>
+        //             <div className='inline'><a href={props.infoLink}><button>View</button></a></div>
+        //         </div>
                 
-            </div>
+        //     </div>
 
-            <div className='row'>
+        //     <div className='row'>
 
-                <div className='col-lg-2'>
+        //         <div className='col-lg-2'>
+        //             <img src={props.image} />
+        //         </div>
+
+        //         <div className='col-lg-10'>
+        //             <p>{props.description}</p>
+        //         </div>
+        //     </div>
+
+        // </div>
+        <div className='card'>
+            <div className='container'>
+                <div className='row'>
                     <img src={props.image} />
                 </div>
-
-                <div className='col-lg-10'>
-                    <p>{props.description}</p>
+                <div className='row'>
+                    {props.title}
+                    <br />
+                    {props.authors}
+                </div>
+                <div className='row'>
+                    <div className='col buttons'>
+                        {props.type === 'saved' && <button className='delete-button' onClick={() => API.delete(props.id)}>Delete</button>}
+                        {props.type !== 'saved' && <button className='save-button' onClick={() => API.save(props)}>Save</button>}
+                    </div>
+                    <div className='col buttons'>
+                        <div className='inline'><a href={props.infoLink}><button className='view-button'>View</button></a></div>
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }
