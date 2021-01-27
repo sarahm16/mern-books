@@ -6,31 +6,20 @@
     display: inline
 }
 
-.card {
-    width: 200px;
-    height: 100%;
-    box-shadow: 0  5px 10px rgba(154,160,185,0.05),
-  0 15px 40px rgba(166,173,201,0.2);
-}
-
-.card:hover {
-    box-shadow: 0  5px 10px rgba(21, 22, 26, 0.05),
-    0 15px 40px rgba(15, 16, 19, 0.2);
-}
-
 .book-card {
     margin-bottom: 30px;
+    display: flex;
+    align-items: stretch;
 }
-
-/* .card-title {
-    text-align: left;
-} */
 
 #image {
     width: 90%;
     margin: 0 auto;
     margin-top: 5%;
-    margin-bottom: 120px;
+}
+
+.image {
+    height: 450px;
 }
 
 button {
@@ -38,15 +27,7 @@ button {
     border: 0px;
 }
 
-/* .card-body {
-    position: absolute;
-} */
 
-.card-body {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
 .buy-button-col {
     width: 100%;
@@ -75,4 +56,36 @@ button {
 
 .buttons {
     padding: 3px;
+}
+
+.card {
+    width: 220px;
+    box-shadow: 0  5px 10px rgba(154,160,185,0.05),
+  0 15px 40px rgba(166,173,201,0.2);
+}
+
+.card:hover {
+    box-shadow: 0  5px 10px rgba(21, 22, 26, 0.05),
+    0 15px 40px rgba(15, 16, 19, 0.2);
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 40%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: .85em;
+}
+
+.authors {
+    font-size: 0.8em;
+}
+
+.about {
+    text-align: left;
 }

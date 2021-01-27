@@ -4,8 +4,18 @@ import './style.css'
 
 function Books(props) {
     //console.log('books props: ' + props.image)
-    console.log(props.type)
+    console.log(props.authors)
     return(
+        // <div className='card card-container'>
+        //     <div className='card-image'>
+        //         <img src={props.image} />
+        //     </div>
+        //     <div className='card-info'>
+        //         <h6>{props.title}</h6>
+        //     </div>
+        // </div>
+
+
         // <div className='container border'>
 
         //     <div className='row'>
@@ -37,16 +47,18 @@ function Books(props) {
         //     </div>
 
         // </div>
+
+
+
         <div className='card'>
-                <div className='image'><img src={props.image} id='image' /></div>
-                {/* <div className='row'>
-                    {props.title}
-                    <br />
-                    {props.authors}
-                </div> */}
+                <div className='card-img-top image'><img src={props.image} id='image' /></div>
                 <div className='card-body'>
-                    {/* <div className='card-title'>{props.title}</div> */}
-                    <div className='row'>
+                    <div className='about'>
+                        <div className='title'>{props.title}</div>
+                        <div className='authors'>By {props.authors}</div>
+                    </div>
+
+                    {/* <div className='row'>
                         <div className='col buttons'>
                             {props.type === 'saved' && <button className='delete-button inline' onClick={() => API.delete(props.id)}>Delete</button>}
                             {props.type !== 'saved' && <button className='save-button inline' onClick={() => API.save(props)}>Save</button>}
@@ -59,7 +71,7 @@ function Books(props) {
                         <div className='col buy-button-col'>
                             <a href={props.infoLink} target ='_blank'><button className='buy'>Buy</button></a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
         </div>
     )

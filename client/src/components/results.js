@@ -30,14 +30,16 @@ class Results extends Component {
                 {this.state.books.length == 0 && <div>LOADING</div>}
                 {this.state.books.length > 0 && 
                 this.state.books.map(book => {
-                    console.log(book)
+                    console.log(book.volumeInfo.authors);
                     let image;
-                    console.log(book.volumeInfo.imageLinks == undefined)
+                    let author;
+                    //console.log(book.volumeInfo.imageLinks == undefined)
                     book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.smallThumbnail;
+                    book.volumeInfo.authors == undefined ? author = '' : author = book.volumeInfo.authors[0];
                     return(
                         <div className='col-lg-3 col-sm-1 col-md-6 book-card'>
                             <Books title={book.volumeInfo.title}
-                            authors={book.volumeInfo.authors}
+                            authors={author}
                             image={image}
                             description={book.volumeInfo.description}
                             infoLink={book.volumeInfo.infoLink} />
