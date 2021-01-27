@@ -15,10 +15,15 @@
     margin-bottom: 30px;
 }
 
+.card-title {
+    text-align: left;
+}
+
 #image {
     width: 90%;
     margin: 0 auto;
-    margin-top: 2.5%;
+    margin-top: 5%;
+    margin-bottom: 200px;
 }
 
 button {
@@ -26,8 +31,13 @@ button {
     border: 0px;
 }
 
-.button-row {
-    margin-top: 20px;
+/* .card-body {
+    position: absolute;
+} */
+
+.card-body {
+    position: absolute;
+    bottom: 0;
 }
 
 .delete-button,
