@@ -26,7 +26,7 @@ class Search extends Component {
 
     render() {
         return(
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='row'>
                     <div className="input-group mb-3">
                         <input
