@@ -12,7 +12,7 @@ class Results extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.title)
+        //console.log(this.props.title)
         const query = `https://www.googleapis.com/books/v1/volumes?q=${this.props.title}`
         axios.get(query)
             .then(res => {
