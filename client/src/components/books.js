@@ -24,6 +24,7 @@ function Books(props) {
                         {props.type === 'saved' && <button className='delete-button inline' onClick={() => API.delete(props.id)}>Delete</button>}
                         {props.type !== 'saved' && <button className='save-button inline' onClick={() => API.save(props)}>Save</button>}
                     </div>
+
                 </div>
         </div>
     )

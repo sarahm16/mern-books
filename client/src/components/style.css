@@ -33,10 +33,6 @@ button {
     bottom: 10px;
 } */
 
-.buttons {
-    margin-bottom: 10px;
-}
-
 .buy-button-col {
     width: 100%;
     text-align: right;
@@ -98,6 +94,10 @@ button {
     background-color: rgb(0, 110, 0);
     color: white;
     font-size: 0.8em;
+}
+
+.buttons {
+    text-align: right;
 }
 
 .save-button:hover {
