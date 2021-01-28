@@ -30,7 +30,7 @@ class Search extends Component {
                 <div className='row'>
                     <div className="input-group mb-3">
                         <input
-                            className='form-control mr-sm-2'
+                            className='form-control'
                             placeholder='Search books by title or author'
                             onChange={this.onChange}
                             value={this.state.title}
