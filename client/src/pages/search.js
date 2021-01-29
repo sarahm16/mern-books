@@ -57,7 +57,8 @@ class Search extends Component {
                 </div>
 
                 <div className='row'>
-                    {this.state.topBooks.length !== 0 && <TopBooks bookList={this.state.topBooks} />}
+                    {!this.state.isSubmitted &&
+                    this.state.topBooks.length !== 0 && <TopBooks bookList={this.state.topBooks} />}
                 </div>
 
                 <div className='row'>
