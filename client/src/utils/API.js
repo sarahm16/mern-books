@@ -28,6 +28,14 @@ export default {
     getTopBooks: function() {
         console.log('get top books')
         return axios.get('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC')
+    },
+
+    getRating: function(isbn) {
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}`)
+            .then(res => {
+                console.log(res.data.items[0].volumeInfo.averageRating)
+                return res.data.items[0].volumeInfo.averageRating
+            })
     }
 
 }

@@ -1,11 +1,3 @@
-/* .jumbotron {
-    background-image: url('http://bookshelf.themerex.net/wp-content/uploads/2015/04/bigopenbook.jpg');
-} */
-
-/* .bg {
-    position: relative;
-} */
-
 .header {
     position: absolute;
     top: 150px;
@@ -93,6 +85,12 @@ button {
     /* height: 60%; */
     margin-top: 290px;
 }
+/* 
+.top-card-body {
+    position: absolute;
+    width: 100%;
+    margin-top: 330px;
+} */
 
 .title {
     font-weight: bold;
