@@ -23,5 +23,11 @@ export default {
     delete: function(id) {
         console.log('delete id: ' + id)
         axios.delete(`/api/books/delete/${id}`)
+    },
+
+    getTopBooks: function() {
+        console.log('get top books')
+        return axios.get('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC')
     }
+
 }

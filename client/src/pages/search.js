@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Results from '../components/results';
 
+import API from '../utils/API';
+
 import './search.css';
 
 class Search extends Component {
@@ -9,8 +11,16 @@ class Search extends Component {
         super()
         this.state = {
             title: "",
+            topBooks: [],
             isSubmitted: false
         }
+    }
+
+    componentDidMount() {
+        API.getTopBooks()
+            .then(res => {
+                this.setState({topBooks: res})
+            })
     }
 
     onChange = (event) => {
