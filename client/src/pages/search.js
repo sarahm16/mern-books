@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Results from '../components/results';
+import TopBooks from './topBooks';
 
 import API from '../utils/API';
 
@@ -53,6 +54,10 @@ class Search extends Component {
                             <button onClick={this.onSubmit} className='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
                         </div>
                     </div>                        
+                </div>
+
+                <div className='row'>
+                    {this.state.topBooks.length !== 0 && <TopBooks bookList={this.state.topBooks} />}
                 </div>
 
                 <div className='row'>
