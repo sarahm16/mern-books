@@ -18,9 +18,15 @@ class TopBooks extends Component {
 
     render() {
         return(
-            this.state.bookList.length !== 0 && this.state.bookList.map(book => {
-                return <TopBook book={book} />
-            })
+                <div className='row'>
+                    {this.state.bookList.length !== 0 && this.state.bookList.map(book => {
+                        return(             
+                            <div className='col-lg-3 col-sm-1 col-md-6 book-card'>
+                                <TopBook book={book} />
+                            </div>
+                        )
+                    })}
+                </div>
         )
     }
 }
