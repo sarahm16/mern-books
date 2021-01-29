@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import TopBook from '../components/topBook';
+
 class TopBooks extends Component {
     constructor() {
         super()
@@ -16,12 +18,8 @@ class TopBooks extends Component {
 
     render() {
         return(
-            // this.state.bookList.map(book => {
-            //     return <div>{book.title}</div>
-            // })
-            //<div>Top Books</div>
             this.state.bookList.length !== 0 && this.state.bookList.map(book => {
-                return <div>{book.title}</div>
+                return <TopBook book={book} />
             })
         )
     }
