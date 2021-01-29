@@ -147,3 +147,8 @@ button {
     content: "\f005 \f005 \f005 \f005 \f005";
     color: #f8ce0b;
   }
+
+a {
+    color: black;
+    text-decoration: none;
+}
