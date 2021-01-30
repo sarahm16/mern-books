@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Books from '../components/books';
-
-import Results from '../components/results';
+import Navbar from '../components/navbar';
+import Header from '../components/header';
 
 import API from '../utils/API';
 
@@ -27,6 +27,9 @@ class Saved extends Component {
 
     render() {
         return(
+        <div>
+            <Navbar />
+            <Header />
             <div className='container-fluid'>
                 <div className='row'>
                     {this.state.saved.map(book => {
@@ -45,6 +48,8 @@ class Saved extends Component {
                     })} 
                 </div>
             </div>
+        </div>
+            
         )}
 }
 
