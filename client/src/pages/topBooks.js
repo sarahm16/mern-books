@@ -25,7 +25,7 @@ class TopBooks extends Component {
                     <div className='row'>
                         {this.state.bookList.length !== 0 && this.state.bookList.map(book => {
                             return(             
-                                <div className='col-lg-3 col-6 col-md-12 book-card'>
+                                <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center'>
                                     <TopBook book={book} />
                                 </div>
                             )
