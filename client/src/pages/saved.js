@@ -34,7 +34,7 @@ class Saved extends Component {
                 <div className='row'>
                     {this.state.saved.map(book => {
                         return(
-                            <div className='col-lg-3 col-sm-1 col-md-6 book-card'>
+                            <div className='col-lg-3 col-6 col-md-6 book-card'>
                                 <Books type='saved'
                                 id={book._id}
                                 title={book.title}

@@ -52,7 +52,7 @@ class Results extends Component {
                         book.volumeInfo.averageRating == undefined ? rating = 1.5 : rating = book.volumeInfo.averageRating;
                         
                         return(
-                            <div className='col-lg-3 col-sm-1 col-md-6 book-card'>
+                            <div className='col-lg-3 col-6 col-md-6 book-card'>
                                 <Books title={book.volumeInfo.title}
                                 authors={author}
                                 image={image}
