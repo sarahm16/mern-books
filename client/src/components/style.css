@@ -158,3 +158,9 @@ a {
     font-weight: bold;
     margin-left: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .header-title {
+        font-size: 0.5em;
+    }
+  }
