@@ -20,16 +20,16 @@ class Results extends Component {
         console.log(title)
     }
 
-    // componentDidMount() {
-    //     //console.log(this.props.title)
-    //     const query = `https://www.googleapis.com/books/v1/volumes?q=${this.props.title}`
-    //     axios.get(query)
-    //         .then(res => {
-    //             this.setState({
-    //                 books: res.data.items
-    //             })
-    //         })
-    // }
+    componentDidMount() {
+        const { title } = this.props.match.params;
+        const query = `https://www.googleapis.com/books/v1/volumes?q=${title}`
+        axios.get(query)
+            .then(res => {
+                this.setState({
+                    books: res.data.items
+                })
+            })
+    }
 
     render() {
         // {this.state.books.length > 0 && console.log(this.state.books[0]);}
@@ -37,12 +37,11 @@ class Results extends Component {
             <div>
                 <Navbar />
                 <Header />
-                {/* <div className='container-fluid'>
+                <div className='container-fluid'>
                     <div className='row'>
                     {this.state.books.length == 0 && <div>LOADING</div>}
                     {this.state.books.length > 0 && 
                     this.state.books.map(book => {
-                        //console.log(book);
                         let image;
                         let author;
                         let rating;
@@ -64,7 +63,7 @@ class Results extends Component {
                         )
                     })}
                     </div>               
-                </div> */}
+                </div>
             </div>
         )
     }
