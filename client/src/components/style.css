@@ -1,5 +1,6 @@
 .header {
     position: absolute;
+    width: 100%;
     top: 150px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -160,9 +161,35 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-    .header-title {
-        font-size: 0.5em;
+    .navbar {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        min-height: 40px !important;
     }
+
+    /* .navbar-toggler,
+    form {
+        height: 30px;
+        margin-top: 10px;
+    } */
+    
+    .header {
+        top: 120px;
+    }
+    
+    .header-title {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    h6 {
+        font-size: 0.8em;
+    }
+
+    .top-sellers-title {
+        font-size: 1.5em;
+    }
+
     .search-form {
         width: 80%;
     }
