@@ -22,14 +22,14 @@ class Navbar extends Component {
             //     <a className="navbar-brand" href='/saved'>Saved</a>
             //     <a className='navbar-brand' href='/'>Top Sellers</a>
             //     <form className="form-inline">
-            //         <input className="form-control" 
-            //             type="search"
-            //             placeholder="Search"
-            //             aria-label="Search"
-            //             id='title'
-            //             value={this.state.title}
-            //             onChange={this.onChange}
-            //              />
+                    // <input className="form-control" 
+                    //     type="search"
+                    //     placeholder="Search"
+                    //     aria-label="Search"
+                    //     id='title'
+                    //     value={this.state.title}
+                    //     onChange={this.onChange}
+                    //      />
             //         <Link to={`/results/${this.state.title}`}><button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></Link>
             //     </form>
             // </nav>
@@ -41,18 +41,25 @@ class Navbar extends Component {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/">Top Sellers <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                            <a className="nav-link" href="/saved">Saved</a>
                         </li>
                     </ul>
                 </div>
 
                 <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input className="form-control" 
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                        id='title'
+                        value={this.state.title}
+                        onChange={this.onChange}
+                         />
+                    <Link to={`/results/${this.state.title}`}><button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></Link>                
                 </form>
             </nav>
         )
