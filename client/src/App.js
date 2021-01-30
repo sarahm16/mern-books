@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
     <div className="App">
-        <Navbar />
-        <Header />
+        {/* <Navbar /> */}
+        {/* <Header /> */}
         <Route exact path='/' component={Search} />
         <Route exact path='/saved' component={Saved} />
         <Route exact path='/results/:title' component={Results} />
