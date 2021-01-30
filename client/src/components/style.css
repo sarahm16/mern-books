@@ -173,11 +173,20 @@ a {
     }
 
     .image {
-        height: 300px;
+        height: 330px;
     }
 
     .card-body {
-        margin-top: 200px;
+        margin-top: 180px;
+    }
+
+    .delete-button {
+        font-size: 0.7em;
+        position: absolute;
+        right: 4px;
+        bottom: 3px;
+        color: white;
+        background-color: rgba(151, 0, 0, 0.767)
     }
 
     /* .navbar-toggler,
