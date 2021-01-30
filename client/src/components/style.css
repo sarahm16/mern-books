@@ -189,21 +189,14 @@ a {
     .header {
         position: absolute;
         top: 40px;
-
     }
 
     .header-wrapper {
         position: relative;
     }
-
-
-
-    /* .header-wrapper {
-        padding-top: 55px;
-    } */
     
     .header-title {
-        font-size: 1.5em;
+        font-size: 1.7em;
         font-weight: bold;
     }
 
@@ -222,4 +215,4 @@ a {
     #title {
         width: 80%;
     }
-  }
+}
