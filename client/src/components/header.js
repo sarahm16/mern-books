@@ -3,7 +3,7 @@ import '../App.css';
 
 function Header() {
     return(
-        <div>
+        <div className='header-wrapper'>
             <div className='bg'>
                 <img src={require('../images/book.jpg')} style={{width: '100%'}} />
             </div>

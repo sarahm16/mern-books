@@ -186,8 +186,20 @@ a {
     } */
     
     .header {
-        top: 110px;
+        position: absolute;
+        top: 40px;
+
     }
+
+    .header-wrapper {
+        position: relative;
+    }
+
+
+
+    /* .header-wrapper {
+        padding-top: 55px;
+    } */
     
     .header-title {
         font-size: 1.4em;
