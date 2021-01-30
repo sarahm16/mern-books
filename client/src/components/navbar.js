@@ -24,6 +24,7 @@ class Navbar extends Component {
             // </nav>
             <nav className="navbar navbar-light bg-light justify-content-between">
                 <a className="navbar-brand" href='/saved'>Saved</a>
+                <a className='navbar-brand' href='/'>Top Sellers</a>
                 <form className="form-inline">
                     <input className="form-control" 
                         type="search"
