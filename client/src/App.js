@@ -5,6 +5,7 @@ import Header from './components/header';
 import Search from './pages/search';
 import Navbar from './components/navbar';
 import Saved from './pages/saved';
+import Results from './components/results';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Route exact path='/' component={Search} />
         <Route exact path='/saved' component={Saved} />
+        <Route exact path='/results/:title' component={Results} />
     </div>
     </Router>
   );
