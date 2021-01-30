@@ -87,12 +87,17 @@ button {
     /* height: 60%; */
     margin-top: 290px;
 }
-/* 
+
 .top-card-body {
     position: absolute;
     width: 100%;
-    margin-top: 330px;
-} */
+    margin-top: 320px;
+    padding-left: 20px;
+}
+
+.top-image {
+    height: 400px;
+}
 
 .title {
     font-weight: bold;
@@ -176,16 +181,29 @@ a {
         height: 330px;
     }
 
+    .top-image {
+        height: 300px;
+    }
+
+    .top-card-body {
+        margin-top: 220px;
+        padding-left: 5px;
+    }
+
     .card-body {
         margin-top: 180px;
     }
 
-    .delete-button {
+    .delete-button,
+    .save-button {
         font-size: 0.7em;
         position: absolute;
         right: 4px;
         bottom: 3px;
         color: white;
+    }
+
+    .delete-button {
         background-color: rgba(151, 0, 0, 0.767)
     }
 

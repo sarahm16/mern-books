@@ -7,8 +7,8 @@ function TopBook(props) {
     return(
         <a href={book['amazon_product_url']} target='_blank'>
             <div className='card'>
-                <div className='image'><img src={book['book_image']} id='image' /></div>
-                <div className='card-body'>
+                <div className='top-image'><img src={book['book_image']} id='image' /></div>
+                <div className=' top-card-body'>
                     <div className='about'>
                         <div className='title'>{book.title}</div>
                         <div className='authors'>By {book.author}</div>
