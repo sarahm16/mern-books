@@ -160,11 +160,23 @@ a {
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .navbar {
         padding-top: 0px !important;
         padding-bottom: 0px !important;
         min-height: 40px !important;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .image {
+        height: 300px;
+    }
+
+    .card-body {
+        margin-top: 200px;
     }
 
     /* .navbar-toggler,
@@ -174,11 +186,11 @@ a {
     } */
     
     .header {
-        top: 120px;
+        top: 110px;
     }
     
     .header-title {
-        font-size: 1.2em;
+        font-size: 1.4em;
         font-weight: bold;
     }
 
