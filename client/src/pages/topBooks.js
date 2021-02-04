@@ -17,16 +17,24 @@ class TopBooks extends Component {
 
     componentDidMount() {
         let bookList = this.props.bookList.data.results.books;
-        console.log(bookList);
+        //console.log(bookList);
         this.setState({bookList: bookList})
 
-        API.getListNames()
+        //API.getListNames()
     }
 
     showMenu = () => {
         this.setState({
             showMenu: !this.state.showMenu
         })
+    }
+
+    changeCategory = (event) => {
+        console.log(event.target.id)
+        API.getTopBooks(event.target.id)
+            .then(res => {
+                console.log(res)
+            })
     }
 
     render() {
@@ -43,18 +51,18 @@ class TopBooks extends Component {
                                     Categories
                                 </button>
                                 {this.state.showMenu && <div className="menu">
-                                    <li className='dropdown-item' id='hardcover-fiction'>Fiction</li>
-                                    <li className="dropdown-item" id='hardcover-nonfiction' >Nonfiction</li>
-                                    <li className="dropdown-item" id='young-adult-hardcover' >Young Adult</li>
-                                    <li className="dropdown-item" id='hardcover-advice'>Advice</li>
-                                    <li className='dropdown-item' id='hardcover-graphic-books'>Graphics</li>
-                                    <li className='dropdown-item' id='childrens-middle-grade'>Childrens</li>
-                                    <li className='dropdown-item' id='business-books'>Business</li>
-                                    <li className='dropdown-item' id='celebrities'>Celebrities</li>
-                                    <li className='dropdown-item' id='food-and-fitness'>Food and Fitness</li>
-                                    <li className='dropdown-item' id='religion-spirituality-and-faith'>Religion</li>
-                                    <li className='dropdown-item' id='travel'>Travel</li>
-                                    <li className='dropdown-item' id='sports'>Sports</li>
+                                    <li onClick={this.changeCategory} className='dropdown-item' id='hardcover-fiction'>Fiction</li>
+                                    <li onClick={this.changeCategory}  className="dropdown-item" id='hardcover-nonfiction' >Nonfiction</li>
+                                    <li onClick={this.changeCategory}  className="dropdown-item" id='young-adult-hardcover' >Young Adult</li>
+                                    <li onClick={this.changeCategory}  className="dropdown-item" id='hardcover-advice'>Advice</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='hardcover-graphic-books'>Graphics</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='childrens-middle-grade'>Childrens</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='business-books'>Business</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='celebrities'>Celebrities</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='food-and-fitness'>Food and Fitness</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='religion-spirituality-and-faith'>Religion</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='travel'>Travel</li>
+                                    <li onClick={this.changeCategory}  className='dropdown-item' id='sports'>Sports</li>
                                 </div>}
                             </div>
                         </div>

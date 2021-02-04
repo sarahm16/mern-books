@@ -19,7 +19,7 @@ class Search extends Component {
     }
 
     componentDidMount() {
-        API.getTopBooks()
+        API.getTopBooks('hardcover-fiction')
             .then(res => {
                 this.setState({topBooks: res})
             })

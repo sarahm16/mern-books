@@ -25,9 +25,9 @@ export default {
         axios.delete(`/api/books/delete/${id}`)
     },
 
-    getTopBooks: function() {
+    getTopBooks: function(category) {
         console.log('get top books')
-        return axios.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC")
+        return axios.get(`https://api.nytimes.com/svc/books/v3/lists/current/${category}.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC`)
     },
 
     getRating: function(isbn) {
