@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import TopBook from '../components/topBook';
 
+import API from '../utils/API';
+
 import './search.css';
 
 class TopBooks extends Component {
@@ -17,6 +19,8 @@ class TopBooks extends Component {
         let bookList = this.props.bookList.data.results.books;
         console.log(bookList);
         this.setState({bookList: bookList})
+
+        API.getListNames()
     }
 
     showMenu = () => {
@@ -39,9 +43,18 @@ class TopBooks extends Component {
                                     Categories
                                 </button>
                                 {this.state.showMenu && <div className="menu">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <a className="dropdown-item" href="#">Something else here</a>
+                                    <li className='dropdown-item' id='hardcover-fiction'>Fiction</li>
+                                    <li className="dropdown-item" id='hardcover-nonfiction' >Nonfiction</li>
+                                    <li className="dropdown-item" id='young-adult-hardcover' >Young Adult</li>
+                                    <li className="dropdown-item" id='hardcover-advice'>Advice</li>
+                                    <li className='dropdown-item' id='hardcover-graphic-books'>Graphics</li>
+                                    <li className='dropdown-item' id='childrens-middle-grade'>Childrens</li>
+                                    <li className='dropdown-item' id='business-books'>Business</li>
+                                    <li className='dropdown-item' id='celebrities'>Celebrities</li>
+                                    <li className='dropdown-item' id='food-and-fitness'>Food and Fitness</li>
+                                    <li className='dropdown-item' id='religion-spirituality-and-faith'>Religion</li>
+                                    <li className='dropdown-item' id='travel'>Travel</li>
+                                    <li className='dropdown-item' id='sports'>Sports</li>
                                 </div>}
                             </div>
                         </div>

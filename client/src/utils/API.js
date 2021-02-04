@@ -27,7 +27,7 @@ export default {
 
     getTopBooks: function() {
         console.log('get top books')
-        return axios.get('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC')
+        return axios.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC")
     },
 
     getRating: function(isbn) {
@@ -35,6 +35,13 @@ export default {
             .then(res => {
                 console.log(res.data.items[0].volumeInfo.averageRating)
                 return res.data.items[0].volumeInfo.averageRating
+            })
+    },
+
+    getListNames: function() {
+        axios.get('https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=YLRu8vMG4O15ZF864mptE1hqX6Mni5TC')
+            .then(res => {
+                console.log(res)
             })
     }
 
