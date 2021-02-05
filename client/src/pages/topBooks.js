@@ -30,11 +30,14 @@ class TopBooks extends Component {
     }
 
     changeCategory = (event) => {
-        console.log(event.target.id)
+        //console.log(event.target.id)
         API.getTopBooks(event.target.id)
             .then(res => {
-                console.log(res.data.results.books)
-                this.setState({bookList: res.data.results.books})
+                //console.log(res.data.results.books)
+                this.setState({
+                    bookList: res.data.results.books,
+                    showMenu: false
+                })
             })
     }
 
