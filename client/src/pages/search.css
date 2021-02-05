@@ -9,5 +9,32 @@
 }
 
 .top-sellers-dropdown {
-    margin-left: 30px;
+    position: absolute;
+    left: 300px;
+    z-index: 99;
 }
+
+.fa-sort-down {
+    color: white
+}
+
+#dropdownMenuButton {
+    font-size: 0.8em;
+}
+
+.categories {
+    padding: 8px 13px 8px 13px;
+}
+
+.menu {
+    background-color: white;
+}
+
+li {
+    cursor: pointer;
+}
+
+/* .book-grid {
+    position: relative;
+    top: 0
+} */

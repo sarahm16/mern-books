@@ -48,8 +48,8 @@ class TopBooks extends Component {
                         </div>
                         <div className='top-sellers-dropdown'>
                             <div className="dropdown">
-                                <button onClick={this.showMenu} className="btn btn-secondary" type="button" id="dropdownMenuButton">
-                                    Categories
+                                <button onClick={this.showMenu} className="btn btn-secondary categories" type="button" id="dropdownMenuButton">
+                                    Categories <i className="fas fa-sort-down"></i>
                                 </button>
                                 {this.state.showMenu && <div className="menu">
                                     <li onClick={this.changeCategory} className='dropdown-item' id='hardcover-fiction'>Fiction</li>
@@ -68,7 +68,7 @@ class TopBooks extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className='row'>
+                    <div className='row book-grid'>
                         {this.state.bookList.length !== 0 && this.state.bookList.map(book => {
                             return(             
                                 <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center'>
