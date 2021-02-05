@@ -33,7 +33,8 @@ class TopBooks extends Component {
         console.log(event.target.id)
         API.getTopBooks(event.target.id)
             .then(res => {
-                console.log(res)
+                console.log(res.data.results.books)
+                this.setState({bookList: res.data.results.books})
             })
     }
 
