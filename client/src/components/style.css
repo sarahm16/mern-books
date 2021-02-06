@@ -182,9 +182,9 @@ a {
         width: 150px;
     }
 
-    .image {
+    /* .image {
         height: 330px;
-    }
+    } */
 
     #image {
         height: 150px;
@@ -199,18 +199,22 @@ a {
         padding-left: 5px;
     }
 
-    .card-body {
+    /* .card-body {
         margin-top: 150px;
+    } */
+
+    .buttons {
+        right: 5px;
+        bottom: 5px;
+        font-size: 0.8em;
     }
 
-    .delete-button,
+    /* .delete-button,
     .save-button {
         font-size: 0.7em;
-        position: absolute;
         right: 4px;
         bottom: 3px;
-        color: white;
-    }
+    } */
 
     .delete-button {
         background-color: rgba(151, 0, 0, 0.767)
