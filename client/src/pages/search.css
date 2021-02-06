@@ -14,8 +14,9 @@
     z-index: 99;
 }
 
-.fa-sort-down {
-    color: white
+.fa-sort-down,
+.fa-list {
+    color: white;
 }
 
 #dropdownMenuButton {
@@ -23,7 +24,8 @@
 }
 
 .categories {
-    padding: 8px 13px 8px 13px;
+    /* padding: 8px 13px 8px 13px; */
+    width: 100%;
 }
 
 .menu {

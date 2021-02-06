@@ -52,7 +52,7 @@ class TopBooks extends Component {
                         <div className='top-sellers-dropdown'>
                             <div className="dropdown">
                                 <button onClick={this.showMenu} className="btn btn-secondary categories" type="button" id="dropdownMenuButton">
-                                    Categories <i className="fas fa-sort-down"></i>
+                                    <i className="fas fa-list"></i> Browse Categories <i className="fas fa-sort-down"></i>
                                 </button>
                                 {this.state.showMenu && <div className="menu">
                                     <li onClick={this.changeCategory} className='dropdown-item' id='hardcover-fiction'>Fiction</li>

@@ -1,9 +1,16 @@
 import React from 'react';
 import API from '../utils/API';
-import './style.css'
+import './style.css';
+
+import axios from 'axios';
 
 function Books(props) {
     let ratingPercent = props.rating / 5 * 100;
+    // console.log(props);
+    // axios.get('https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?isbn=9780143034759')
+    //     .then(res => {
+    //         console.log(res)
+    //     })
     
     return(
         <div className='card'>

@@ -42,6 +42,7 @@ class Results extends Component {
                     {this.state.books.length == 0 && <div>LOADING</div>}
                     {this.state.books.length > 0 && 
                     this.state.books.map(book => {
+                        console.log(book.volumeInfo.industryIdentifiers[0].identifier);
                         let image;
                         let author;
                         let rating;
