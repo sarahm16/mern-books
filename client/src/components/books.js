@@ -6,12 +6,6 @@ import axios from 'axios';
 
 function Books(props) {
     let ratingPercent = props.rating / 5 * 100;
-    // console.log(props);
-    // axios.get('https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?isbn=9780143034759')
-    //     .then(res => {
-    //         console.log(res)
-    //     })
-    //console.log(props)
     
     return(
             <div className='card'>

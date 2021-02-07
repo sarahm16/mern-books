@@ -41,6 +41,12 @@ class Results extends Component {
                 <Header />
                 <div className='container-fluid'>
                     <div className='row'>
+                        <div className='results-title'>
+                            {/* <h2>TOP SELLERS</h2> */}
+                            RESULTS
+                        </div>
+                    </div>
+                    <div className='row'>
                     {this.state.books.length == 0 && <div>LOADING</div>}
                     {this.state.books.length > 0 && 
                     this.state.books.map(book => {
