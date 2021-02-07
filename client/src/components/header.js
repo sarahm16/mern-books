@@ -2,10 +2,11 @@ import React from 'react';
 import '../App.css';
 
 function Header() {
+    console.log(window.screen)
     return(
         <div className='header-wrapper'>
             <div className='bg'>
-                <img src={require('../images/book.jpg')} style={{width: '100%'}} />
+                {window.screen.width < 600 ? <img src={require('../images/croppedBook.jpg')}   alt='book cover' /> : <img src={require('../images/book.jpg')}   alt='book cover' />}
             </div>
             <div className='header'>
                 <div className='header-title'>React Google Books</div>
