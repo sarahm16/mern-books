@@ -14,14 +14,7 @@ class Results extends Component {
         }
     }
 
-    componentDidMount() {
-        console.log('results');
-        const { title } = this.props.match.params;
-        console.log(title)
-    }
-
-    componentDidMount() {
-        const { title } = this.props.match.params;
+    initializeComponent(title) {
         const query = `https://www.googleapis.com/books/v1/volumes?q=${title}`
         axios.get(query)
             .then(res => {
@@ -29,6 +22,29 @@ class Results extends Component {
                     books: res.data.items
                 })
             })
+    }
+
+    componentDidMount = () =>  {
+        let { title } = this.props.match.params;
+        this.initializeComponent(title)
+        // const query = `https://www.googleapis.com/books/v1/volumes?q=${title}`
+        // axios.get(query)
+        //     .then(res => {
+        //         this.setState({
+        //             books: res.data.items
+        //         })
+        //     })
+    }
+
+    // componentDidUpdate(prevProps, prevState) {
+    //     console.log(prevProps);
+    //     console.log(prevState);
+    // }
+
+    componentWillReceiveProps = (nextProps) => {
+        let title = nextProps.match.params.title
+        this.initializeComponent(title)
+        //console.log(nextProps);
     }
 
     render() {

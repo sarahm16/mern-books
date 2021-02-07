@@ -13,7 +13,7 @@ class Navbar extends Component {
         this.setState({
             [event.target.id]: event.target.value
         })
-        console.log(this.state.title)
+        //console.log(this.state.title)
     }
 
     render() {
