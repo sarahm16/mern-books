@@ -46,13 +46,13 @@ class TopBooks extends Component {
                 <div className='row'>
                     <div className='row top-sellers-header'>
                         <div className='top-sellers-title'>
-                            <h2>TOP SELLERS</h2>
-                            {/* TOP SELLERS */}
+                            {/* <h2>TOP SELLERS</h2> */}
+                            TOP SELLERS
                         </div>
                         <div className='top-sellers-dropdown'>
                             <div className="dropdown">
                                 <button onClick={this.showMenu} className="btn btn-secondary categories" type="button" id="dropdownMenuButton">
-                                    <i className="fas fa-list"></i> Browse Categories <i className="fas fa-sort-down"></i>
+                                    <i className="fas fa-list"></i> Categories <i className="fas fa-sort-down"></i>
                                 </button>
                                 {this.state.showMenu && <div className="menu">
                                     <li onClick={this.changeCategory} className='dropdown-item' id='hardcover-fiction'>Fiction</li>

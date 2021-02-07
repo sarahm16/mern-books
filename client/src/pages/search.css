@@ -12,6 +12,11 @@
     position: absolute;
     left: 300px;
     z-index: 99;
+    padding-top: 10px;
+}
+
+.top-sellers-title {
+    font-size: 2.3em;
 }
 
 .fa-sort-down,
@@ -40,3 +45,18 @@ li {
     position: relative;
     top: 0
 } */
+
+@media only screen and (max-width: 700px) {
+    .top-sellers-title {
+        font-size: 1.4em;
+        font-weight: bolder;
+    }
+
+    .top-sellers-dropdown {
+        left: 200px;
+    }
+
+    .top-sellers-header {
+        margin-left: 10px;
+    }
+}
