@@ -49,11 +49,13 @@ li {
 @media only screen and (max-width: 700px) {
     .top-sellers-title {
         font-size: 1.4em;
-        font-weight: bolder;
+        font-weight: bold;
     }
 
     .top-sellers-dropdown {
         left: 200px;
+        padding-top: 0px;
+
     }
 
     .top-sellers-header {
