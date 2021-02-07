@@ -11,9 +11,11 @@ function Books(props) {
     //     .then(res => {
     //         console.log(res)
     //     })
+    //console.log(props)
     
     return(
-        <div className='card'>
+            <div className='card'>
+                <a href={props.infoLink} target='_blank' className='google-link'></a>
                 <div className='image'><img src={props.image} id='image' /></div>
                 <div className='card-body'>
                     <div className='about'>

@@ -27,28 +27,14 @@ class Results extends Component {
     componentDidMount = () =>  {
         let { title } = this.props.match.params;
         this.initializeComponent(title)
-        // const query = `https://www.googleapis.com/books/v1/volumes?q=${title}`
-        // axios.get(query)
-        //     .then(res => {
-        //         this.setState({
-        //             books: res.data.items
-        //         })
-        //     })
     }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     console.log(prevProps);
-    //     console.log(prevState);
-    // }
 
     componentWillReceiveProps = (nextProps) => {
         let title = nextProps.match.params.title
         this.initializeComponent(title)
-        //console.log(nextProps);
     }
 
     render() {
-        // {this.state.books.length > 0 && console.log(this.state.books[0]);}
         return(
             <div>
                 <Navbar />
@@ -58,7 +44,7 @@ class Results extends Component {
                     {this.state.books.length == 0 && <div>LOADING</div>}
                     {this.state.books.length > 0 && 
                     this.state.books.map(book => {
-                        console.log(book.volumeInfo.industryIdentifiers[0].identifier);
+                        //console.log(book.volumeInfo.industryIdentifiers[0].identifier);
                         let image;
                         let author;
                         let rating;
