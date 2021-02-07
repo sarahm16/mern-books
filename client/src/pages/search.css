@@ -6,6 +6,7 @@
     width: 100%;
     text-align: left;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .top-sellers-dropdown {
@@ -34,11 +35,17 @@
 }
 
 .menu {
-    background-color: white;
+    /* background-color: rgb(212, 212, 212); */
+    background-color: white;;
 }
 
 li {
     cursor: pointer;
+}
+
+.book-grid {
+    background-color: rgb(240, 240, 240);
+    padding-top: 20px;
 }
 
 /* .book-grid {

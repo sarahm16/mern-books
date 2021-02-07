@@ -16,6 +16,19 @@ img {
     width: 100%;
 }
 
+.book-grid {
+    background-color: rgb(240, 240, 240);
+    padding-top: 20px;
+}
+
+/* .banner {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url('../images/book.jpg') no-repeat;
+    width: 100%;
+} */
+
 .row {
     padding: 10px;
 }
@@ -31,7 +44,8 @@ img {
     font-size: 2.3em;
     width: 100%;
     text-align: left;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 .google-link {
@@ -203,6 +217,10 @@ a {
         min-height: 40px !important;
     }
 
+    .banner {
+        background: url('../images/croppedBook.jpg');
+    }
+
     .card {
         width: 150px;
     }
@@ -231,6 +249,7 @@ a {
     .results-title {
         font-size: 1.3em;
         font-weight: bold;
+        margin-top: 5px;
     }
 
     /* .card-body {

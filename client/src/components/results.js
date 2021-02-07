@@ -43,10 +43,10 @@ class Results extends Component {
                     <div className='row'>
                         <div className='results-title'>
                             {/* <h2>TOP SELLERS</h2> */}
-                            RESULTS
+                            RESULTS:
                         </div>
                     </div>
-                    <div className='row'>
+                    <div className='row book-grid'>
                     {this.state.books.length == 0 && <div>LOADING</div>}
                     {this.state.books.length > 0 && 
                     this.state.books.map(book => {
