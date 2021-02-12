@@ -31,13 +31,14 @@ class TopBooks extends Component {
     }
 
     changeCategory = (event) => {
-        //console.log(event.target.id)
+        this.setState({activePage: event.target.id})
         API.getTopBooks(event.target.id)
             .then(res => {
                 //console.log(res.data.results.books)
                 this.setState({
                     bookList: res.data.results.books,
-                    showMenu: false
+                    showMenu: false,
+                    
                 })
             })
     }
@@ -63,18 +64,18 @@ class TopBooks extends Component {
                                 </button> }
                                 
                                 {this.state.showMenu && <div className="menu">
-                                    <li onClick={this.changeCategory} className={this.state.activePage === 'hardcover-fiction' ? 'dropdown-item active' : 'dropdown-item'} id='hardcover-fiction'>Fiction</li>
-                                    <li onClick={this.changeCategory}  className="dropdown-item" id='hardcover-nonfiction' >Nonfiction</li>
-                                    <li onClick={this.changeCategory}  className="dropdown-item" id='young-adult-hardcover' >Young Adult</li>
-                                    <li onClick={this.changeCategory}  className="dropdown-item" id='hardcover-advice'>Advice</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='hardcover-graphic-books'>Graphics</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='childrens-middle-grade'>Childrens</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='business-books'>Business</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='celebrities'>Celebrities</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='food-and-fitness'>Food and Fitness</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='religion-spirituality-and-faith'>Religion</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='travel'>Travel</li>
-                                    <li onClick={this.changeCategory}  className='dropdown-item' id='sports'>Sports</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'hardcover-fiction' ? 'dropdown-item active-page' : 'dropdown-item'} id='hardcover-fiction'>Fiction</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'hardcover-nonfiction' ? 'dropdown-item active-page' : 'dropdown-item'} id='hardcover-nonfiction' >Nonfiction</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'young-adult-hardcover' ? 'dropdown-item active-page' : 'dropdown-item'} id='young-adult-hardcover' >Young Adult</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'hardcover-advice' ? 'dropdown-item active-page' : 'dropdown-item'} id='hardcover-advice'>Advice</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'hardcover-graphic-books' ? 'dropdown-item active-page' : 'dropdown-item'} id='hardcover-graphic-books'>Graphics</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'childrens-middle-grade' ? 'dropdown-item active-page' : 'dropdown-item'} id='childrens-middle-grade'>Childrens</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'business-books' ? 'dropdown-item active-page' : 'dropdown-item'} id='business-books'>Business</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'celebrities' ? 'dropdown-item active-page' : 'dropdown-item'} id='celebrities'>Celebrities</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'food-and-fitness' ? 'dropdown-item active-page' : 'dropdown-item'} id='food-and-fitness'>Food and Fitness</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'religion-spirituality-and-faith' ? 'dropdown-item active-page' : 'dropdown-item'} id='religion-spirituality-and-faith'>Religion</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'travel' ? 'dropdown-item active-page' : 'dropdown-item'} id='travel'>Travel</li>
+                                    <li onClick={this.changeCategory}  className={this.state.activePage === 'sports' ? 'dropdown-item active-page' : 'dropdown-item'} id='sports'>Sports</li>
                                 </div>}
                             </div>
                         </div>

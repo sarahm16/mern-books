@@ -47,10 +47,9 @@ li {
     color: rgb(24, 145, 24)
 }
 
-/* .active {
-    background-color: white;
-    color: rgb(0, 55, 236)
-} */
+.active-page {
+    color: rgb(39, 211, 39)
+}
 
 .book-grid {
     background-color: rgb(240, 240, 240);
