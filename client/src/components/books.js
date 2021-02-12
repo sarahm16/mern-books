@@ -7,7 +7,17 @@ import axios from 'axios';
 function Books(props) {
     let ratingPercent = props.rating / 5 * 100;
 
-    console.log(props.image);
+    //console.log(props.image);
+
+    async function deleteBook() {
+        //props.updateSaved();
+        API.delete(props.id)
+
+    }
+
+    function updateSaved() {
+        deleteBook().then(() => {props.updateSaved()})
+    }
     
     return(
             <div className='card'>
@@ -26,7 +36,7 @@ function Books(props) {
                     </div>
 
                     <div className='buttons'>
-                        {props.type === 'saved' && <button className='delete-button inline' onClick={() => API.delete(props.id)}>Delete</button>}
+                        {props.type === 'saved' && <button className='delete-button inline' onClick={updateSaved}>Delete</button>}
                         {props.type !== 'saved' && <button className='save-button inline' onClick={() => API.save(props)}>Save</button>}
                     </div>
 

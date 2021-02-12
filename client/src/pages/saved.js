@@ -15,7 +15,7 @@ class Saved extends Component {
         }
     }
 
-    componentDidMount() {
+    getSaved = () => {
         API.getSaved()
             .then(res => {
                 console.log(res.data)
@@ -23,6 +23,14 @@ class Saved extends Component {
                     saved: res.data
                 })
             })
+    }
+
+    componentDidMount() {
+        this.getSaved()
+    }
+
+    updateSaved = () => {
+        this.getSaved();
     }
 
     render() {
@@ -42,7 +50,8 @@ class Saved extends Component {
                                 image={book.image}
                                 description={book.description}
                                 infoLink={book.infoLink}
-                                rating={book.rating} />
+                                rating={book.rating} 
+                                updateSaved={this.updateSaved}/>
                             </div>
                         )
                     })} 
