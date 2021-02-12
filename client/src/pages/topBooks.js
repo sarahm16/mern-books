@@ -11,7 +11,8 @@ class TopBooks extends Component {
         super()
         this.state = {
             bookList: [],
-            showMenu: false
+            showMenu: false,
+            activePage: 'hardcover-fiction'
         }
     }
 
@@ -62,7 +63,7 @@ class TopBooks extends Component {
                                 </button> }
                                 
                                 {this.state.showMenu && <div className="menu">
-                                    <li onClick={this.changeCategory} className='dropdown-item' id='hardcover-fiction'>Fiction</li>
+                                    <li onClick={this.changeCategory} className={this.state.activePage === 'hardcover-fiction' ? 'dropdown-item active' : 'dropdown-item'} id='hardcover-fiction'>Fiction</li>
                                     <li onClick={this.changeCategory}  className="dropdown-item" id='hardcover-nonfiction' >Nonfiction</li>
                                     <li onClick={this.changeCategory}  className="dropdown-item" id='young-adult-hardcover' >Young Adult</li>
                                     <li onClick={this.changeCategory}  className="dropdown-item" id='hardcover-advice'>Advice</li>

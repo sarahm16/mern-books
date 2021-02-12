@@ -43,6 +43,15 @@ li {
     cursor: pointer;
 }
 
+.dropdown-item:hover {
+    color: rgb(24, 145, 24)
+}
+
+/* .active {
+    background-color: white;
+    color: rgb(0, 55, 236)
+} */
+
 .book-grid {
     background-color: rgb(240, 240, 240);
     padding-top: 20px;
