@@ -28,7 +28,7 @@ class Search extends Component {
     render() {
         return(
             <div>
-                <Navbar />
+                <Navbar page='topsellers' />
                 <Header />
                 <div className='container-fluid'>
                     <div className='row'>

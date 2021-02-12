@@ -6,6 +6,8 @@ import axios from 'axios';
 
 function Books(props) {
     let ratingPercent = props.rating / 5 * 100;
+
+    console.log(props.image);
     
     return(
             <div className='card'>

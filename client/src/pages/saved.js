@@ -28,7 +28,7 @@ class Saved extends Component {
     render() {
         return(
         <div>
-            <Navbar />
+            <Navbar page='saved' />
             <Header />
             <div className='container-fluid'>
                 <div className='row'>

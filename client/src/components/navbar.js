@@ -6,8 +6,13 @@ class Navbar extends Component {
         super();
         this.state = {
             title: '',
-            showMenu: false
+            showMenu: false,
+            page: ''
         }
+    }
+
+    componentDidMount() {
+        this.setState({page: this.props.page})
     }
 
     onChange = (event) => {
@@ -35,7 +40,7 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse py-2" >
                         <ul className="navbar-nav mr-auto py-0">
                             <li className="nav-item">
-                                <a className="nav-link text-left" href="/">Top Sellers <span className="sr-only">(current)</span></a>
+                                <a className='nav-link text-left' href="/">Top Sellers</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-left" href="/saved">Saved</a>
@@ -57,9 +62,9 @@ class Navbar extends Component {
                 </nav>
                 {this.state.showMenu && 
                     <div className='menu bg-light'>
-                        <a className="nav-link text-left" href="/" id='top-sellers'>Top Sellers <span className="sr-only">(current)</span></a>
+                        <a className={this.state.page==='topsellers' ? 'nav-link text-left active-page' : "nav-link text-left"} href="/" id='top-sellers'>Top Sellers <span className="sr-only">(current)</span></a>
                         <div className='hr'></div>
-                        <a className="nav-link text-left" href="/saved" id='saved'>Saved</a>
+                        <a className={this.state.page==='saved' ? 'nav-link text-left active-page' : "nav-link text-left"} href="/saved" id='saved'>Saved</a>
                     </div>
                 }
             </div>
