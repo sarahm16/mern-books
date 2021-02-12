@@ -1,8 +1,19 @@
 .menu {
     position: absolute;
+    padding: 0px 5px 5px 5px;
     z-index: 99;
 }
 
+/* #top-sellers {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.555);
+} */
+
+.hr {
+    width: 90%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.555);
+    margin: 0 auto;
+}
 
 .header {
     position: absolute;
