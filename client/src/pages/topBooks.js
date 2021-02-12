@@ -53,15 +53,15 @@ class TopBooks extends Component {
                         </div>
                         <div className='top-sellers-dropdown'>
                             <div className="dropdown">
-                                {window.screen.width < 400 &&
-                                <button onClick={this.showMenu} className="btn btn-secondary categories" type="button" id="dropdownMenuButton">
+                                {/* {window.screen.width < 400 && */}
+                                <button onClick={this.showMenu} className="btn btn-secondary categories small-screen-button" type="button" id="dropdownMenuButton">
                                     <i className="fas fa-list"></i> Categories <i className="fas fa-sort-down"></i>
-                                </button>}
+                                </button>
                                 
-                                {window.screen.width > 400 && 
-                                <button onClick={this.showMenu} className="btn btn-secondary categories" type="button" id="dropdownMenuButton">
+                                {/* {window.screen.width > 400 &&  */}
+                                <button onClick={this.showMenu} className="btn btn-secondary categories large-screen-button" type="button" id="dropdownMenuButton">
                                     <i className="fas fa-list"></i> Browse Categories <i className="fas fa-sort-down"></i>
-                                </button> }
+                                </button>
                                 
                                 {this.state.showMenu && <div className="menu">
                                     <li onClick={this.changeCategory}  className={this.state.activePage === 'hardcover-fiction' ? 'dropdown-item active-page' : 'dropdown-item'} id='hardcover-fiction'>Fiction</li>
