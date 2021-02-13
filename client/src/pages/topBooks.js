@@ -19,12 +19,8 @@ class TopBooks extends Component {
 
     componentDidMount() {
         let bookList = this.props.bookList.data.results.books;
-        //let key = (Math.random());
-        console.log(Math.floor(Math.random() * 100000000))
-
         this.setState({
             bookList: bookList
-            
         })
     }
 
@@ -41,7 +37,7 @@ class TopBooks extends Component {
                 //console.log(res.data.results.books)
                 this.setState({
                     bookList: res.data.results.books,
-                    showMenu: false,
+                    showMenu: false
                     
                 })
             })
@@ -87,7 +83,7 @@ class TopBooks extends Component {
                     <div className='row book-grid'>
                         {this.state.bookList.length !== 0 && this.state.bookList.map(book => {
                             return(             
-                                <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center' key={book.isbns[0].isbn10}>
+                                <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center' key={Math.floor(Math.random() * 100000000)}>
                                     <TopBook book={book} />
                                 </div>
                             )
