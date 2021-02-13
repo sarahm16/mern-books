@@ -54,7 +54,40 @@
     color: rgb(39, 211, 39) !important;
 }
 
+.saved-toast {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 7px;
+    font-weight: bold;
+    background-color: rgb(43, 180, 43);
+    color: white;
+    z-index: 100;
+}
+
+.fadeOut {
+    animation: fadeOut ease 4s;
+    -webkit-animation: fadeOut ease 4s;
+    -moz-animation: fadeOut ease 4s;
+    -o-animation: fadeOut ease 4s;
+    -ms-animation: fadeOut ease 4s;
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+.visible{
+    opacity:1;
+}
+
 img {
+
     width: 100%;
 }
 
