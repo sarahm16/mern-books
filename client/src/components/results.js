@@ -64,7 +64,8 @@ class Results extends Component {
                         //HANDLE UNDEFINED DATA
                         book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.smallThumbnail;
                         book.volumeInfo.authors == undefined ? author = '' : author = book.volumeInfo.authors[0];
-                        book.volumeInfo.averageRating == undefined ? rating = 1.5 : rating = book.volumeInfo.averageRating;
+                        book.volumeInfo.averageRating == undefined ? rating = 2.5 : rating = book.volumeInfo.averageRating;
+                        console.log(rating);
                         
                         return(
                             <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center'>
