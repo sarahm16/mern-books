@@ -2,7 +2,6 @@ import React from 'react';
 
 function TopBook(props) {
     let book = props.book;
-   // console.log(book);
 
     return(
         <a href={book['amazon_product_url']} target='_blank'>

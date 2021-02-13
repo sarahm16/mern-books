@@ -12,16 +12,20 @@ class TopBooks extends Component {
         this.state = {
             bookList: [],
             showMenu: false,
-            activePage: 'hardcover-fiction'
+            activePage: 'hardcover-fiction',
+            key: 0
         }
     }
 
     componentDidMount() {
         let bookList = this.props.bookList.data.results.books;
-        //console.log(bookList);
-        this.setState({bookList: bookList})
+        //let key = (Math.random());
+        console.log(Math.floor(Math.random() * 100000000))
 
-        //API.getListNames()
+        this.setState({
+            bookList: bookList
+            
+        })
     }
 
     showMenu = () => {
@@ -83,7 +87,7 @@ class TopBooks extends Component {
                     <div className='row book-grid'>
                         {this.state.bookList.length !== 0 && this.state.bookList.map(book => {
                             return(             
-                                <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center'>
+                                <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center' key={book.isbns[0].isbn10}>
                                     <TopBook book={book} />
                                 </div>
                             )

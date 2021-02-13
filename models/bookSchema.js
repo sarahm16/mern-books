@@ -19,6 +19,9 @@ const bookSchema = new Schema({
     },
     infoLink: {
         type: String
+    },
+    key: {
+        type: Number
     }
 })
 

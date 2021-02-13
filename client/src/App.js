@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import Header from './components/header';
 import Search from './pages/search';
-import Navbar from './components/navbar';
-//import Saved from './pages/saved';
-//import Results from './components/results';
 
 const Saved = lazy(() => import('./pages/saved'));
 const Results = lazy(() => import('./components/results'));
@@ -23,7 +20,5 @@ function App() {
     </Router>
   );
 }
-
-//test
 
 export default App;
