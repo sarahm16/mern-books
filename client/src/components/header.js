@@ -6,7 +6,8 @@ function Header() {
     return(
         <div className='header-wrapper'>
             <div className='bg'>
-                {window.screen.width < 600 ? <img src={require('../images/croppedBook.webp')}   alt='book cover' /> : <img src={require('../images/book.webp')}   alt='book cover' />}
+                {window.screen.width < 600 ? <img src={require('../images/croppedBook-min.jpg')}   alt='book cover' /> : <img src={require('../images/book-min.jpg')}   alt='book cover' />}
+            
             </div>
             <div className='header'>
                 <div className='header-title'>React Google Books</div>
