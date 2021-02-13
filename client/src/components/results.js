@@ -4,6 +4,7 @@ import Books from './books';
 
 import Navbar from './navbar';
 import Header from './header';
+import LoadingBar from './loading';
 
 class Results extends Component {
 
@@ -40,14 +41,19 @@ class Results extends Component {
                 <Navbar />
                 <Header />
                 <div className='container-fluid'>
-                    <div className='row'>
+
+                    {this.state.books.length > 0 && <div className='row'>
                         <div className='results-title'>
-                            {/* <h2>TOP SELLERS</h2> */}
                             RESULTS:
                         </div>
-                    </div>
+                    </div>}
+                    
+                    {this.state.books.length === 0 && <div className='row'>
+                        <LoadingBar />
+                    </div>}
+
                     <div className='row book-grid'>
-                    {this.state.books.length == 0 && <div>LOADING</div>}
+                    {/* {this.state.books.length == 0 && <LoadingBar />} */}
                     {this.state.books.length > 0 && 
                     this.state.books.map(book => {
                         //console.log(book.volumeInfo.industryIdentifiers[0].identifier);

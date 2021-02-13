@@ -1,3 +1,13 @@
+.loading {
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    background-color: rgba(66, 0, 189, 0.911);
+    border-radius: 7px;
+    padding: 8px 25px 8px 25px;
+    margin: 0 auto;
+}
+
 .menu {
     position: absolute;
     padding: 0px 5px 5px 5px;
