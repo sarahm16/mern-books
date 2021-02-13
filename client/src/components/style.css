@@ -101,10 +101,7 @@ img {
 }
 
 .book-card {
-    /* margin: 0 auto; */
     margin-bottom: 30px;
-    /* display: flex; */
-    /* align-items: stretch; */
 }
 
 .results-title {
@@ -130,26 +127,6 @@ img {
     margin-top: 5%;
 }
 
-/* .image {
-    height: 380px;
-    /* border: 1px solid red;
-} */
-
-button {
-    border-radius: 5px;
-    border: 0px;
-}
-
-.delete-button,
-.save-button {
-    z-index: 99;
-}
-
-/* .buttons {
-    position: absolute;
-    bottom: 10px;
-} */
-
 .buy-button-col {
     width: 100%;
     text-align: right;
@@ -168,12 +145,6 @@ button {
 .buy:hover {
     border: 2px solid rgb(86, 214, 0)
 }
-
-/* .delete-button,
-.save-button,
-.view-button {
-    width: 100%;
-} */
 
 .card {
     width: 220px;
@@ -219,10 +190,21 @@ button {
     text-align: left;
 }
 
-.save-button {
-    background-color: rgb(0, 110, 0);
+.save-button,
+.delete-button {
     color: white;
     font-size: 0.8em;
+    z-index: 99;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.save-button {
+    background-color: rgb(0, 110, 0);
+}
+
+.delete-button {
+    background-color: rgb(187, 0, 0);
 }
 
 .buttons {
@@ -336,21 +318,8 @@ a {
         font-size: 0.8em;
     }
 
-    /* .delete-button,
-    .save-button {
-        font-size: 0.7em;
-        right: 4px;
-        bottom: 3px;
-    } */
-
-    .delete-button {
+    /* .delete-button {
         background-color: rgba(151, 0, 0, 0.767)
-    }
-
-    /* .navbar-toggler,
-    form {
-        height: 30px;
-        margin-top: 10px;
     } */
     
     .header {
@@ -370,14 +339,6 @@ a {
     h6 {
         font-size: 0.8em;
     }
-
-    /* .top-sellers-title {
-        font-size: 1.1em;
-    } */
-
-    /* .search-form {
-        width: 80%;
-    } */
 
     #title {
         width: 80%;
