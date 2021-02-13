@@ -40,6 +40,12 @@ class Saved extends Component {
             <Header />
             <div className='container-fluid'>
                 <div className='row'>
+                        <div className='saved-title'>
+                            {/* <h2>TOP SELLERS</h2> */}
+                            SAVED:
+                        </div>
+                    </div>
+                <div className='row'>
                     {this.state.saved.map(book => {
                         return(
                             <div className='col-lg-3 col-6 col-md-6 book-card d-flex justify-content-center'>
