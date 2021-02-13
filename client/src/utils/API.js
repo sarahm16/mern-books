@@ -9,7 +9,8 @@ export default {
             title: book.title,
             description: book.description,
             infoLink: book.infoLink,
-            rating: book.rating
+            rating: book.rating,
+            key: book.id
         }
         axios.post('/api/books/save', saved)
             .then(res => {console.log(res)})

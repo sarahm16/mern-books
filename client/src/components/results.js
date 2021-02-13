@@ -74,7 +74,8 @@ class Results extends Component {
                                 image={image}
                                 description={book.volumeInfo.description}
                                 infoLink={book.volumeInfo.infoLink}
-                                rating={rating} />
+                                rating={rating}
+                                id={key} />
                             </div>
                         )
                     })}

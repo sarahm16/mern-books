@@ -14,6 +14,7 @@ class Books extends Component {
 
     componentDidMount() {
         // console.log(this.props.rating)
+        console.log(this.props)
         let ratingPercent = this.props.rating / 5 * 100;
         this.setState({rating: ratingPercent});
     }
@@ -26,7 +27,6 @@ class Books extends Component {
     saveBook = () =>  {
         this.setState({showToast: true});
         setTimeout(this.fadeOut, 1000);
-        //console.log(this.props)
         API.save(this.props);
     }
 
