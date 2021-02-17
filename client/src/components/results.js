@@ -19,6 +19,7 @@ class Results extends Component {
         const query = `https://www.googleapis.com/books/v1/volumes?q=${title}&maxResults=20`
         axios.get(query)
             .then(res => {
+                console.log(res);
                 this.setState({
                     books: res.data.items
                 })
@@ -61,7 +62,8 @@ class Results extends Component {
                         let image;
                         let author;
                         let rating;
-                        let key = book.volumeInfo.industryIdentifiers[0].identifier;
+                        //let key = book.volumeInfo.industryIdentifiers[0].identifier;
+                        let key = Math.floor(Math.random() * 100000000000);
 
                         //HANDLE UNDEFINED DATA
                         book.volumeInfo.imageLinks == undefined ? image = '' : image = book.volumeInfo.imageLinks.smallThumbnail;
