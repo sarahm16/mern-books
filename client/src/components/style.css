@@ -278,6 +278,11 @@ a {
         background-image: url('../images/croppedBook.jpg');
         background-size: 100% 100%;        
     }
+
+    .loading {
+        font-size: 1em;
+        /* padding: 5px 10px 5px 10px; */
+    }
 }
 
 @media only screen and (max-width: 700px) {

@@ -4,7 +4,7 @@ import TopBook from '../components/topBook';
 
 import API from '../utils/API';
 
-import './search.css';
+import './style.css';
 
 class TopBooks extends Component {
     constructor() {

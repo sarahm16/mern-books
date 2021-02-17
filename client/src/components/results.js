@@ -16,7 +16,7 @@ class Results extends Component {
     }
 
     initializeComponent(title) {
-        const query = `https://www.googleapis.com/books/v1/volumes?q=${title}`
+        const query = `https://www.googleapis.com/books/v1/volumes?q=${title}&maxResults=20`
         axios.get(query)
             .then(res => {
                 this.setState({
@@ -51,6 +51,7 @@ class Results extends Component {
                     {this.state.books.length === 0 && <div className='row'>
                         <LoadingBar />
                     </div>}
+
 
                     <div className='row book-grid'>
                     {this.state.books.length > 0 && 

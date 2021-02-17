@@ -6,9 +6,9 @@ import Header from '../components/header';
 
 import API from '../utils/API';
 
-import './search.css';
+import './style.css';
 
-class Search extends Component {
+class Landing extends Component {
     
     constructor() {
         super()
@@ -40,4 +40,4 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default Landing;
