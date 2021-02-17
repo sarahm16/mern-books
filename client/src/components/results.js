@@ -11,7 +11,9 @@ class Results extends Component {
     constructor() {
         super();
         this.state = {
-            books: []
+            books: [],
+            totalItems: 0,
+            loading: true
         }
     }
 
@@ -19,9 +21,16 @@ class Results extends Component {
         const query = `https://www.googleapis.com/books/v1/volumes?q=${title}&maxResults=20`
         axios.get(query)
             .then(res => {
-                console.log(res);
+                console.log(res.data.items === undefined);
+                if(res.data.items !== undefined) {
+                    this.setState({
+                        books: res.data.items
+                    })
+                }
                 this.setState({
-                    books: res.data.items
+                    // books: res.data.items,
+                    totalItems: res.data.totalItems,
+                    loading: false
                 })
             })
     }
@@ -43,19 +52,19 @@ class Results extends Component {
                 <Header />
                 <div className='container-fluid'>
 
-                    {this.state.books.length > 0 && <div className='row'>
+                    {!this.state.loading && <div className='row'>
                         <div className='results-title'>
                             RESULTS:
                         </div>
                     </div>}
                     
-                    {this.state.books.length === 0 && <div className='row'>
+                    {this.state.loading && <div className='row'>
                         <LoadingBar />
                     </div>}
 
 
                     <div className='row book-grid'>
-                    {this.state.books.length > 0 && 
+                    {this.state.totalItems > 0 && 
                     this.state.books.map(book => {
 
                         //console.log(book.volumeInfo.industryIdentifiers[0].identifier);
