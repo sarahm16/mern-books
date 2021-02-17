@@ -48,7 +48,7 @@ class Books extends Component {
                     
                     <div className='image'>
                         {this.state.showToast && <div className={this.state.fadeOut ? 'saved-toast visible' : 'saved-toast fadeOut'}>BOOK SAVED</div>}
-                        <img src={this.props.image} id='image' /></div>
+                        <img src={this.props.image === "" ? require('../images/placeholder.png') : this.props.image} id='image' /></div>
                     <div className='card-body'>
                         <div className='about'>
                             <div className='title'>{this.props.title}</div>
