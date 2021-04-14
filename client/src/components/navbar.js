@@ -48,6 +48,7 @@ class Navbar extends Component {
                         </ul>
                     </div>
 
+
                     <form className="form-inline my-2 my-lg-0 search-form py-0" >
                         <input className="form-control" 
                             type="search"
