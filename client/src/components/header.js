@@ -6,7 +6,7 @@ function Header() {
     return(
         <div className='header-wrapper'>
             <div className='bg'>
-                {window.screen.width < 600 ? <img src={require('../images/croppedBook-min.webp')}   alt='book cover' /> : <img src={require('../images/book-min.webp')}   alt='book cover' />}
+                {window.screen.width < 600 ? <img src={require('../images/croppedBook-min.jpg')}   alt='book cover' /> : <img src={require('../images/book-min.jpg')}   alt='book cover' />}
             
             </div>
             <div className='header'>
